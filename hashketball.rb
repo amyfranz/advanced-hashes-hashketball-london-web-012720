@@ -214,7 +214,7 @@ def most_points_scored
   return name
 end
 
-def most_points_scored
+def cool
   home = 0
   away = 0
   game_hash.map do |place, team|
