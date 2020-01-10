@@ -220,6 +220,7 @@ def winning_team
   game_hash.map do |place, team|
     i = 0
     while i < team[:players].length do
+      puts place
       if place == home
         home_points += team[:players][i][:points]
       else
