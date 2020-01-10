@@ -190,7 +190,7 @@ def big_shoe_rebounds
     while i < team[:players].length do
       if team[:players][i][:shoe] > shoe_size
         shoe_size = team[:players][i][:shoe]
-        rebound = team[:players][i][:rebound]
+        rebound = team[:players][i][:rebounds]
       end
       i += 1
     end
