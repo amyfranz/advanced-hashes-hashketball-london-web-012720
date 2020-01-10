@@ -198,20 +198,20 @@ def big_shoe_rebounds
   return rebound
 end
 
-def big_shoe_rebounds
-  shoe_size = 0
-  rebound = 0
+def most_points_scored
+  points = 0
+  name = 0
   game_hash.map do |place, team|
     i = 0
     while i < team[:players].length do
-      if team[:players][i][:shoe] > shoe_size
-        shoe_size = team[:players][i][:shoe]
-        rebound = team[:players][i][:rebounds]
+      if team[:players][i][:points] > points
+        points = team[:players][i][:points]
+        name = team[:players][i][:player_name]
       end
       i += 1
     end
   end
-  return rebound
+  return name
 end
 
 
