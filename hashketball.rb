@@ -215,12 +215,16 @@ def most_points_scored
 end
 
 def winning_team
-  home = 0
-  away = 0
+  home_points = 0
+  away_points = 0
   game_hash.map do |place, team|
     i = 0
     while i < team[:players].length do
-      place += team[:players][i][:points]
+      if place == home
+        home_points += team[:players][i][:points]
+      else
+        away_points += team[:players][i][:points]
+      end
       i += 1
     end
   end
