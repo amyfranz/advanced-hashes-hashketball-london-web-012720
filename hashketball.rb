@@ -220,7 +220,7 @@ def most_points_scored
   game_hash.map do |place, team|
     i = 0
     while i < team[:players].length do
-      team += team[:players][i][:points]
+      place += team[:players][i][:points]
       i += 1
     end
   end
