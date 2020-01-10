@@ -221,7 +221,7 @@ def winning_team
     i = 0
     while i < team[:players].length do
       puts place
-      if place == 'home'
+      if place == "home"
         home_points += team[:players][i][:points]
       else
         away_points += team[:players][i][:points]
