@@ -224,7 +224,11 @@ def most_points_scored
       i += 1
     end
   end
-  return name
+  if home > away 
+    return game_hash[:home][:place]
+  else
+    return game_hash[:away][:place]
+  end
 end
 
 
