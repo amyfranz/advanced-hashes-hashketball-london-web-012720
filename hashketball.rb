@@ -174,12 +174,13 @@ def player_stats(player)
     while i < team[:players].length do
       if team[:players][i][:player_name] == player
         team[:players][i].delete :player_name
+        puts team[:players][i]
         return team[:players][i]
       end
       i += 1 
     end
   end
-end  
+end   
 
 
 
