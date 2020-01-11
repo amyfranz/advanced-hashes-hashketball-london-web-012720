@@ -240,6 +240,7 @@ def player_with_longest_name
   game_hash.map do |place, team|
     i = 0
     while i < team[:players].length do
+      puts length_name
       if team[:players][i][:player_name].length > length_name
         length = team[:players][i][:player_name].length
         name = team[:players][i][:player_name]
