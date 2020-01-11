@@ -217,7 +217,6 @@ end
 def winning_team
   home_points = 0
   away_points = 0
-  game_hash.map do |place, team|
     i = 0
     while i < team[:players].length do
       puts place
@@ -231,7 +230,12 @@ def winning_team
       end
       i += 1
     end
-  end
+    
+  i = 0
+    while i < team[:players].length do
+      away_points += game_hash[:away][:players][i][:points]
+      i += 1
+    end
   if home_points > away_points 
     return game_hash[:home][:team_name]
   else
