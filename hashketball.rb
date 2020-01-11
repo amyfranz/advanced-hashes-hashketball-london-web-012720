@@ -217,20 +217,11 @@ end
 def winning_team
   home_points = 0
   away_points = 0
-    i = 0
-    while i < team[:players].length do
-      puts place
-      if place == ':home'
-        puts home_points
-        home_points += team[:players][i][:points]
-      else
-        puts 1
-        puts away_points
-        away_points += team[:players][i][:points]
-      end
-      i += 1
-    end
-    
+  i = 0
+  while i < game_hash[:home][:players].length do
+    home_points += game_hash[:home][:players][i][:points]
+    i += 1
+  end
   i = 0
   while i < game_hash[:away][:players].length do
     away_points += game_hash[:away][:players][i][:points]
