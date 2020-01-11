@@ -232,7 +232,7 @@ def winning_team
     end
     
   i = 0
-    while i < team[:players].length do
+    while i < game_hash[:away][:players].length do
       away_points += game_hash[:away][:players][i][:points]
       i += 1
     end
