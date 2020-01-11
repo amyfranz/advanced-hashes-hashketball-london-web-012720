@@ -250,7 +250,37 @@ def player_with_longest_name
   return name
 end
 
+def steals
+  steals = 0
+  name = 0
+  game_hash.map do |place, team|
+    i = 0
+    while i < team[:players].length do
+      if team[:players][i][:steals] > steals
+        steals = team[:players][i][:steals]
+        name = team[:players][i][:player_name]
+      end
+      i += 1
+    end
+  end
+  return name
+end
 
+def long_name_steals_a_ton
+  longest_name = player_with_longest_name
+  steals_name = steals
+  game_hash.map do |place, team|
+    i = 0
+    while i < team[:players].length do
+      if team[:players][i][:player_name] == longest_name && team[:players][i][:player_name] == steals_name
+        return true 
+      end
+      i += 1
+    end
+  end
+  return false 
+end
+    
 
 
 
