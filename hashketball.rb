@@ -232,10 +232,10 @@ def winning_team
     end
     
   i = 0
-    while i < game_hash[:away][:players].length do
-      away_points += game_hash[:away][:players][i][:points]
-      i += 1
-    end
+  while i < game_hash[:away][:players].length do
+    away_points += game_hash[:away][:players][i][:points]
+    i += 1
+  end
   if home_points > away_points 
     return game_hash[:home][:team_name]
   else
