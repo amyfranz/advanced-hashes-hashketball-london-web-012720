@@ -234,6 +234,23 @@ def winning_team
   end
 end
 
+def most_points_scored
+  length = 0
+  name = 0
+  game_hash.map do |place, team|
+    i = 0
+    while i < team[:players].length do
+      if team[:players][i][:points] > points
+        points = team[:players][i][:points]
+        name = team[:players][i][:player_name]
+      end
+      i += 1
+    end
+  end
+  return name
+end
+
+
 
 
 
