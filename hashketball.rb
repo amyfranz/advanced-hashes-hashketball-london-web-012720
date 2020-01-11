@@ -225,6 +225,7 @@ def winning_team
         puts home_points
         home_points += team[:players][i][:points]
       else
+        puts 1
         puts away_points
         away_points += team[:players][i][:points]
       end
