@@ -244,6 +244,7 @@ def player_with_longest_name
       if team[:players][i][:player_name].length > length_name
         puts team[:players][i][:player_name].length
         length = team[:players][i][:player_name].length
+        puts length
         name = team[:players][i][:player_name]
       end
       i += 1
